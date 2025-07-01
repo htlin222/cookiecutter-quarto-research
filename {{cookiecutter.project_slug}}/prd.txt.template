@@ -1,1 +1,36 @@
-# YOUR_RESEARCH_DETAIL_Here
+Your are in a quarto project with the following structure:
+
+📂 .
+├──  _quarto.yml
+├── 📂 data
+│   ├── 📂 external
+│   ├── 📂 processed
+│   └── 📂 raw
+├── 📂 docs
+├──  index.qmd
+├── 📂 manuscript
+│   ├──  ama.csl
+│   ├──  manuscript.qmd
+│   ├──  reference.docx
+│   └──  references.bib
+├── 📂 output
+│   ├── 📂 figures
+│   └── 📂 tables
+├──  prd.txt.template
+├── 📂 R
+│   ├── 󰟔 01_data_import.R
+│   ├── 󰟔 02_data_cleaning.R
+│   ├── 󰟔 03_analysis.R
+│   └── 󰟔 04_visualization.R
+├──  README.md
+├──  renv.lock.template
+└──  styles.css
+
+This is a project about ...
+
+First, use the pubmedmcp to understand the topic background
+Then, see the raw data in the @data/raw, understand what I am going to study
+Recommand the research method
+and write the scripts in the @R folder, each scripts output should be in the @output, sink the text report from R script in the @output folder as well.
+After all the research is done, start to write the manuscript
+use basic IMRaD for the the manuscript, You should see the Title, scripts in the R to write the methods, and base on the output resesult, write the result section.
