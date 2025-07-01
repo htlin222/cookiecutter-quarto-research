@@ -8,7 +8,7 @@ A cookiecutter template for creating reproducible research projects using Quarto
 
 ```bash
 # Clone or download this template
-git clone https://github.com/your-username/cookiecutter-quarto-research.git
+git clone https://github.com/htlin222/cookiecutter-quarto-research.git
 cd cookiecutter-quarto-research
 
 # Install all dependencies automatically
@@ -50,27 +50,31 @@ cookiecutter /path/to/cookiecutter-quarto-research/
 ### Required Software
 
 1. **Python 3.6+** (for cookiecutter)
+
    ```bash
    # Check Python version
    python --version
    ```
 
 2. **R 4.0+**
+
    ```bash
    # Check R version
    R --version
    ```
 
 3. **Quarto CLI**
+
    ```bash
    # Check Quarto installation
    quarto --version
-   
+
    # Install Quarto (if needed)
    # Visit: https://quarto.org/docs/get-started/
    ```
 
 4. **Git** (optional but recommended)
+
    ```bash
    git --version
    ```
@@ -101,6 +105,7 @@ make install-r-packages
 #### Install Python & Cookiecutter
 
 **Option A: Using pipx (Recommended)**
+
 ```bash
 # macOS (Homebrew)
 brew install pipx
@@ -112,6 +117,7 @@ pipx install cookiecutter
 ```
 
 **Option B: Using pip**
+
 ```bash
 # macOS (Homebrew)
 brew install python
@@ -130,13 +136,15 @@ pip3 install cookiecutter
 #### Install R
 
 **macOS:**
+
 ```bash
 brew install r
 ```
 
-**Windows:** Download from https://cran.r-project.org/
+**Windows:** Download from <https://cran.r-project.org/>
 
 **Linux:**
+
 ```bash
 sudo apt update
 sudo apt install r-base
@@ -145,6 +153,7 @@ sudo apt install r-base
 #### Install Quarto
 
 **macOS:**
+
 ```bash
 brew install quarto
 ```
@@ -163,12 +172,12 @@ cookiecutter cookiecutter-quarto-research/
 
 ```
 project_name [My Research Project]: Clinical Trial Analysis
-project_slug [clinical-trial-analysis]: 
+project_slug [clinical-trial-analysis]:
 author_name [Your Name]: Dr. Jane Smith
 author_email [your.email@example.com]: jane.smith@university.edu
 project_short_description [A brief description]: Analysis of Phase II clinical trial data
-version [0.1.0]: 
-year [2024]: 
+version [0.1.0]:
+year [2024]:
 use_git [y]: y
 use_renv [y]: y
 data_format [csv]: csv
@@ -258,7 +267,7 @@ your-project-name/
 The manuscript follows the standard IMRaD (Introduction, Methods, Results, and Discussion) format with modular sections:
 
 - **`00_abstract.qmd`**: Structured abstract with Background, Methods, Results, Conclusions
-- **`01_introduction.qmd`**: Literature review, study rationale, objectives, and hypotheses  
+- **`01_introduction.qmd`**: Literature review, study rationale, objectives, and hypotheses
 - **`02_methods.qmd`**: Study design, population, data collection, statistical analysis
 - **`03_results.qmd`**: Baseline characteristics, primary/secondary outcomes, subgroup analyses
 - **`04_discussion.qmd`**: Key findings, literature comparison, strengths/limitations, implications
@@ -266,6 +275,7 @@ The manuscript follows the standard IMRaD (Introduction, Methods, Results, and D
 - **`06_acknowledgments.qmd`**: Acknowledgments, author contributions, funding, conflicts
 
 **Benefits of modular structure**:
+
 - Better organization and version control
 - Easier collaboration with co-authors
 - Cleaner diffs when tracking changes
@@ -284,6 +294,7 @@ The manuscript follows the standard IMRaD (Introduction, Methods, Results, and D
 ### Common Issues
 
 **"Command not found: quarto"**
+
 ```bash
 # Option A: Use Makefile
 make install-quarto
@@ -293,6 +304,7 @@ make install-quarto
 ```
 
 **"Command not found: cookiecutter"**
+
 ```bash
 # Option A: Use Makefile
 make install-cookiecutter
@@ -304,6 +316,7 @@ pip install cookiecutter
 ```
 
 **R packages missing**
+
 ```bash
 # Option A: Use Makefile
 make install-r-packages
@@ -313,12 +326,14 @@ Rscript -e "install.packages(c('tidyverse', 'quarto', 'here', 'janitor', 'naniar
 ```
 
 **Check all dependencies**
+
 ```bash
 # Use Makefile to check what's installed
 make check-deps
 ```
 
 **Git not initialized**
+
 ```bash
 cd your-project-name
 git init
@@ -358,7 +373,7 @@ p1 <- ggplot(data, aes(x = treatment, y = outcome)) +
        y = "Outcome Score")
 
 # Save to output/figures/
-ggsave(here("output", "figures", "figure1.png"), p1, 
+ggsave(here("output", "figures", "figure1.png"), p1,
        width = 8, height = 6, dpi = 300)
 ```
 
@@ -388,7 +403,7 @@ kable(baseline_table, caption = "Table 1: Baseline Characteristics")
 The template includes real references from recent medical literature sourced via PubMed:
 
 - **Clinical Trials**: Randomized controlled trials from anesthesiology and pulmonology
-- **Biomarker Studies**: Research on diagnostic and prognostic biomarkers  
+- **Biomarker Studies**: Research on diagnostic and prognostic biomarkers
 - **Cohort Studies**: Large-scale epidemiological investigations
 - **Methodology Papers**: Studies on causal inference and research methods
 
@@ -405,3 +420,4 @@ All references follow proper BibTeX format with DOI and PMID for easy verificati
 ## 📄 License
 
 This template is released under the MIT License.
+
