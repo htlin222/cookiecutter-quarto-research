@@ -1,0 +1,13 @@
+## Abstract
+
+**Background:** Provide context for your research question. State the problem or knowledge gap that your study addresses. Include relevant background information that justifies the need for this research.
+
+**Objective:** Clearly state the primary objective or research question. Include any specific hypotheses being tested.
+
+**Methods:** Briefly describe your study design, population, setting, and analytical approach. Include key methodological details that are essential for understanding your findings.
+
+**Results:** Summarize your key findings, including sample size, main outcomes, and statistical significance. Present the most important quantitative results that answer your research question.
+
+**Conclusions:** State the main conclusions that can be drawn from your results. Highlight the clinical or scientific significance of your findings and their potential implications.
+
+**Keywords:** keyword1, keyword2, keyword3, keyword4, keyword5

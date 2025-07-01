@@ -1,0 +1,14 @@
+{
+  "project_name": "My Research Project",
+  "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-').replace('_', '-') }}",
+  "author_name": "Your Name",
+  "author_email": "your.email@example.com",
+  "project_short_description": "A brief description of your research project",
+  "version": "0.1.0",
+  "year": "2024",
+  "use_git": "y",
+  "use_renv": "y",
+  "data_format": ["csv", "xlsx", "sas", "stata"],
+  "output_formats": ["html", "docx"],
+  "citation_style": "ama"
+}

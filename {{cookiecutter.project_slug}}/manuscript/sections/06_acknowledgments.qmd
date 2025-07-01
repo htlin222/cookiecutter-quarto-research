@@ -1,0 +1,23 @@
+## Acknowledgments
+
+We thank [individuals/organizations] for their contributions to this study. We are grateful to [specific contributions, e.g., data collection, statistical advice, laboratory analyses].
+
+We acknowledge the participants who volunteered their time for this research.
+
+## Author Contributions
+
+**{{ cookiecutter.author_name }}**: Conceptualization, methodology, formal analysis, writing - original draft, writing - review and editing.
+
+[Add additional authors and their contributions using standard CRediT taxonomy]
+
+## Funding
+
+This work was supported by [funding source and grant numbers]. The funding source had no role in the study design, data collection, analysis, interpretation, or writing of the manuscript.
+
+## Conflicts of Interest
+
+The authors declare no conflicts of interest related to this work.
+
+## Data Availability
+
+[Describe data availability - e.g., "Data are available upon reasonable request" or "Data are available at [repository]"]

@@ -1,0 +1,59 @@
+## Methods
+
+### Study Design
+
+Describe your overall study design (e.g., prospective cohort study, randomized controlled trial, cross-sectional study, case-control study). Include the study timeline and any key design features.
+
+This was a [study design] conducted between [start date] and [end date] at [study location/institution].
+
+### Study Population
+
+#### Inclusion Criteria
+- Criterion 1
+- Criterion 2
+- Criterion 3
+
+#### Exclusion Criteria  
+- Criterion 1
+- Criterion 2
+- Criterion 3
+
+#### Sample Size Calculation
+Describe how you determined the required sample size. Include the assumptions used for power calculations, expected effect sizes, alpha level, and power.
+
+### Data Collection
+
+#### Primary Outcome
+Define your primary outcome measure clearly, including how it was measured, by whom, and at what time points.
+
+#### Secondary Outcomes
+List and define all secondary outcome measures.
+
+#### Exposure Variables
+Describe the main exposure or intervention variables.
+
+#### Covariates
+List important covariates that were collected, including demographic variables, clinical characteristics, and potential confounders.
+
+### Statistical Analysis
+
+All analyses were performed using R version `r getRversion()` [@r2024]. The analysis plan was prespecified and followed the intention-to-treat principle [if applicable].
+
+#### Descriptive Statistics
+Describe how you summarized baseline characteristics and outcome variables.
+
+#### Primary Analysis
+Describe the statistical methods used to analyze your primary outcome. Include details about the statistical tests, regression models, and any adjustments made.
+
+#### Secondary Analyses
+Describe methods for secondary outcomes and any subgroup or sensitivity analyses.
+
+#### Missing Data
+Describe how missing data were handled.
+
+#### Multiple Comparisons
+If applicable, describe any adjustments made for multiple comparisons.
+
+### Ethics and Regulatory Approval
+
+This study was approved by the [Ethics Committee/IRB name] (approval number: [number]). All participants provided written informed consent. The study was conducted in accordance with the Declaration of Helsinki and good clinical practice guidelines.

@@ -1,0 +1,84 @@
+/* Custom CSS for {{ cookiecutter.project_name }} */
+
+/* Improve table styling */
+.table {
+  font-size: 0.9em;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Code block styling */
+pre {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+/* Figure captions */
+.figure-caption {
+  font-size: 0.9em;
+  color: #6c757d;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+/* Section numbering */
+.header-section-number {
+  color: #007bff;
+  font-weight: 600;
+}
+
+/* Improve print styling */
+@media print {
+  .navbar, .toc, .code-tools {
+    display: none !important;
+  }
+  
+  pre {
+    white-space: pre-wrap;
+  }
+  
+  .page-break {
+    page-break-after: always;
+  }
+}
+
+/* Callout boxes */
+.callout {
+  margin: 1rem 0;
+  padding: 1rem;
+  border-left: 4px solid #007bff;
+  background-color: #f0f7ff;
+}
+
+.callout-warning {
+  border-left-color: #ffc107;
+  background-color: #fff9e6;
+}
+
+.callout-important {
+  border-left-color: #dc3545;
+  background-color: #ffe6e9;
+}
+
+/* Improve link styling */
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Table of contents */
+.toc-item {
+  padding: 0.25rem 0;
+}
+
+.toc-item.active {
+  font-weight: 600;
+  color: #007bff;
+}

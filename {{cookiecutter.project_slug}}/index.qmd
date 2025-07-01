@@ -1,0 +1,159 @@
+---
+title: "{{ cookiecutter.project_name }}"
+author: "{{ cookiecutter.author_name }}"
+date: today
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    theme: cosmo
+  docx:
+    toc: true
+    number-sections: true
+    reference-doc: manuscript/reference.docx
+execute:
+  echo: true
+  warning: false
+  message: false
+---
+
+## Executive Summary
+
+{{ cookiecutter.project_short_description }}
+
+## Introduction
+
+This report presents the analysis and findings from the {{ cookiecutter.project_name }} study.
+
+## Methods
+
+### Data Sources
+
+Data files are stored in the `data/raw/` directory. The analysis uses R version `r getRversion()` for all statistical computations.
+
+```{r}
+#| label: setup
+#| include: false
+
+# Function to safely load packages
+load_package <- function(pkg) {
+  if (!requireNamespace(pkg, quietly = TRUE)) {
+    message(paste("Package", pkg, "not found. Please install with: install.packages('", pkg, "')", sep = ""))
+    return(FALSE)
+  }
+  library(pkg, character.only = TRUE)
+  return(TRUE)
+}
+
+# Load required libraries
+required_packages <- c("tidyverse", "knitr", "here")
+recommended_packages <- c("janitor")
+optional_packages <- c("kableExtra", "DT", "gt")
+
+# Load required packages
+missing_required <- c()
+for (pkg in required_packages) {
+  if (!load_package(pkg)) {
+    missing_required <- c(missing_required, pkg)
+  }
+}
+
+if (length(missing_required) > 0) {
+  stop(paste("Required packages missing:", paste(missing_required, collapse=", "), 
+             "\nPlease run: make install-r-packages"))
+}
+
+# Load recommended packages (warn if missing)
+for (pkg in recommended_packages) {
+  if (!load_package(pkg)) {
+    message(paste("Recommended package", pkg, "not found. Install with: install.packages('", pkg, "')", sep=""))
+  }
+}
+
+# Load optional packages (silent if missing)
+kable_extra_available <- load_package("kableExtra")
+dt_available <- load_package("DT")
+gt_available <- load_package("gt")
+
+# Set global options
+options(scipen = 999)
+knitr::opts_chunk$set(
+  fig.path = "output/figures/",
+  fig.width = 8,
+  fig.height = 6,
+  dpi = 300
+)
+
+# Source analysis functions if they exist (with error handling)
+source_if_exists <- function(file) {
+  if (file.exists(file)) {
+    tryCatch({
+      source(file)
+      message(paste("Loaded:", file))
+    }, error = function(e) {
+      message(paste("Warning: Could not source", file, "- Error:", e$message))
+    })
+  }
+}
+
+source_if_exists("R/01_data_import.R")
+source_if_exists("R/02_data_cleaning.R")
+source_if_exists("R/03_analysis.R")
+source_if_exists("R/04_visualization.R")
+```
+
+### Statistical Analysis
+
+Describe your statistical methods here.
+
+## Results
+
+### Descriptive Statistics
+
+```{r}
+#| label: descriptive-stats
+#| eval: false
+
+# Load and summarize data
+# data <- read_data()
+# summary_stats <- create_summary_table(data)
+# 
+# # Display table with best available method
+# if (kable_extra_available) {
+#   kable(summary_stats, caption = "Table 1: Descriptive Statistics") %>%
+#     kable_styling(bootstrap_options = c("striped", "hover"))
+# } else if (dt_available) {
+#   DT::datatable(summary_stats, caption = "Table 1: Descriptive Statistics")
+# } else {
+#   kable(summary_stats, caption = "Table 1: Descriptive Statistics")
+# }
+```
+
+### Main Findings
+
+Present your main findings here.
+
+## Discussion
+
+Interpret your results in the context of existing literature.
+
+## Conclusions
+
+Summarize the key takeaways from your analysis.
+
+## References
+
+::: {=html}
+<div id="refs"></div>
+:::
+
+## Appendix
+
+Additional tables and figures can be included here.
+
+---
+
+*Report generated on `r Sys.Date()`*

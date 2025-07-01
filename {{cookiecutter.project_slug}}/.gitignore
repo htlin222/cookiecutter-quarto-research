@@ -1,0 +1,90 @@
+# R and RStudio files
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# R Environment Variables
+.Renviron
+.Rprofile
+
+# renv
+renv/
+renv.lock
+
+# Quarto
+/_site/
+/.quarto/
+/_book/
+/_freeze/
+*.html
+!**/reference.docx
+
+# Data files (protect sensitive data)
+data/raw/*
+!data/raw/.gitkeep
+data/external/*
+!data/external/.gitkeep
+*.csv
+*.xlsx
+*.xls
+*.sas7bdat
+*.dta
+*.sav
+
+# Output files
+output/figures/*
+!output/figures/.gitkeep
+output/tables/*
+!output/tables/.gitkeep
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.log
+
+# Cache
+.cache/
+__pycache__/
+
+# IDE
+.vscode/
+.idea/
+
+# LaTeX auxiliary files
+*.aux
+*.lof
+*.log
+*.lot
+*.fls
+*.out
+*.toc
+*.fmt
+*.fot
+*.cb
+*.cb2
+.*.lb
+
+# Bibliography auxiliary files
+*.bbl
+*.bcf
+*.blg
+*-blx.aux
+*-blx.bib
+*.run.xml

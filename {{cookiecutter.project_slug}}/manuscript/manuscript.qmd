@@ -1,0 +1,36 @@
+---
+title: "{{ cookiecutter.project_name }}"
+author:
+  - name: "{{ cookiecutter.author_name }}"
+    email: "{{ cookiecutter.author_email }}"
+    affiliations:
+      - name: "Your Institution"
+date: today
+format:
+  docx:
+    reference-doc: reference.docx
+    number-sections: true
+    toc: false
+bibliography: references.bib
+csl: ama.csl
+---
+
+{% raw %}{{< include sections/00_abstract.qmd >}}{% endraw %}
+
+{% raw %}{{< include sections/01_introduction.qmd >}}{% endraw %}
+
+{% raw %}{{< include sections/02_methods.qmd >}}{% endraw %}
+
+{% raw %}{{< include sections/03_results.qmd >}}{% endraw %}
+
+{% raw %}{{< include sections/04_discussion.qmd >}}{% endraw %}
+
+{% raw %}{{< include sections/05_conclusions.qmd >}}{% endraw %}
+
+{% raw %}{{< include sections/06_acknowledgments.qmd >}}{% endraw %}
+
+## References
+
+::: {=html}
+<div id="refs"></div>
+:::

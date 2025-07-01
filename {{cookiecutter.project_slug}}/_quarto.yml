@@ -1,0 +1,80 @@
+project:
+  type: website
+  output-dir: _site
+  
+  preview:
+    port: 4200
+
+metadata-files:
+  - _metadata.yml
+
+website:
+  title: "{{ cookiecutter.project_name }}"
+  navbar:
+    left:
+      - text: "Report"
+        href: index.qmd
+      - text: "Manuscript"
+        href: manuscript/manuscript.qmd
+    right:
+      - icon: github
+        href: https://github.com/{{ cookiecutter.author_name }}/{{ cookiecutter.project_slug }}
+  
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Project"
+        contents:
+          - index.qmd
+      - section: "Manuscript"
+        contents:
+          - manuscript/manuscript.qmd
+
+format:
+  html:
+    theme:
+      light: cosmo
+      dark: darkly
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    code-fold: true
+    code-tools: true
+    code-copy: true
+    code-overflow: wrap
+    number-sections: true
+    smooth-scroll: true
+    link-external-icon: true
+    link-external-newwindow: true
+    
+execute:
+  freeze: auto
+  echo: true
+  warning: false
+  message: false
+  cache: true
+
+bibliography: manuscript/references.bib
+csl: manuscript/ama.csl
+
+# R-specific options
+knitr:
+  opts_chunk:
+    comment: "#>"
+    fig.align: "center"
+    fig.retina: 2
+    fig.width: 8
+    fig.height: 6
+    fig.path: "output/figures/"
+
+# Language settings
+lang: en
+
+# Author information
+author:
+  - name: "{{ cookiecutter.author_name }}"
+    email: "{{ cookiecutter.author_email }}"
+    affiliations:
+      - name: "Your Institution"
