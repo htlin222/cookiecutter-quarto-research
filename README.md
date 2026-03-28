@@ -1,3 +1,7 @@
+![GitHub stars](https://img.shields.io/github/stars/htlin222/cookiecutter-quarto-research?style=flat-square)
+![Last commit](https://img.shields.io/github/last-commit/htlin222/cookiecutter-quarto-research?style=flat-square)
+![License](https://img.shields.io/github/license/htlin222/cookiecutter-quarto-research?style=flat-square)
+
 # Cookiecutter Quarto Research Template
 
 A cookiecutter template for creating reproducible research projects using Quarto, R, and the AMA citation style. Perfect for clinical research, medical studies, and academic papers.
