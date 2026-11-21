@@ -1,0 +1,71 @@
+{
+	"permissions": {
+		"allow": [
+			"Bash(mkdir:*)",
+			"Bash(touch:*)",
+			"Bash(tree:*)",
+			"Bash(ls:*)",
+			"Bash(grep:*)",
+			"Bash(make:*)"
+		],
+		"deny": []
+	},
+	"mcpServers": {
+		"reference-mcp": {
+			"command": "uvx",
+			"args": ["reference-mcp"]
+		},
+		"apple-notifier": {
+			"command": "apple-notifier-mcp"
+		},
+		"pubmedmcp": {
+			"command": "uvx",
+			"args": ["pubmedmcp@latest"],
+			"env": {
+				"UV_PRERELEASE": "allow",
+				"UV_PYTHON": "3.12"
+			}
+		},
+		"git": {
+			"command": "uvx",
+			"args": ["mcp-server-git", "--repository", "/Users/htlin/note_editor"]
+		},
+		"mcp-server-commands": {
+			"command": "npx",
+			"args": ["mcp-server-commands"]
+		},
+		"textEditor": {
+			"command": "npx",
+			"args": ["-y", "mcp-server-text-editor", "--python=3.11"]
+		},
+		"time": {
+			"command": "/opt/homebrew/bin/uvx",
+			"args": [
+				"--python",
+				"3.10.16",
+				"mcp-server-time",
+				"--local-timezone=Asia/Taipei"
+			]
+		},
+		"apple-mcp": {
+			"command": "bunx",
+			"args": ["@dhravya/apple-mcp@latest"]
+		},
+		"sequential-thinking": {
+			"command": "npx",
+			"args": ["-y", "@modelcontextprotocol/server-sequential-thinking"]
+		},
+		"desktop-commander": {
+			"command": "npx",
+			"args": ["-y", "@wonderwhy-er/desktop-commander"]
+		},
+		"fetch": {
+			"command": "node",
+			"args": ["/Users/htlin/fetch-mcp/dist/index.js"]
+		},
+		"taskmaster-ai": {
+			"command": "npx",
+			"args": ["-y", "task-master-mcp"]
+		}
+	}
+}

@@ -1,1 +1,4 @@
 **/.DS_Store
+
+# Home cleanup: generated files and machine-local state
+.claude/settings.local.json
